@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduTime</title>
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- MANIFEST (para convertirlo en APP) -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- ICONO -->
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+
+</head>
+<body>
+
+    <header>
+        <h1>EduTime</h1>
+        <p class="sub">Tu espacio para estudiar mejor</p>
+    </header>
+
+    <section id="features">
+        <h2>Funciones principales</h2>
+
+        <div class="feature-card">
+            <h3>🎯 Enfoque Inteligente</h3>
+            <p>Temporizadores, modo concentración, recordatorios y estadísticas.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📚 Organización escolar</h3>
+            <p>Agenda, tareas, exámenes y actividades.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📝 Apuntes rápidos</h3>
+            <p>Guarda tus ideas o recordatorios mientras estudias.</p>
+        </div>
+    </section>
+
+    <section id="timer">
+        <h2>Temporizador de enfoque</h2>
+        <div id="time-display">25:00</div>
+
+        <button onclick="startTimer()">Iniciar</button>
+        <button onclick="pauseTimer()">Pausar</button>
+        <button onclick="resetTimer()">Reiniciar</button>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
