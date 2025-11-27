@@ -1,54 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enfoque Inteligente - EduTime</title>
-    <link rel="stylesheet" href="estilo.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Enfoque - EduTime</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
-
 <body>
-    <header>
-        <h1>Enfoque Inteligente</h1>
-        <p>Consejos para estudiar con mayor concentración.</p>
-    </header>
 
-    <main class="contenedor">
+    <div class="header">
+        <h1 class="brand">Modo Enfoque</h1>
+        <p class="subtitle">Elige tu tiempo y concéntrate</p>
+    </div>
 
-        <div class="tarjeta">
-            <h2>Consejo del día</h2>
-            <p id="tip"></p>
-            <button onclick="nuevoTip()">Nuevo consejo</button>
-        </div>
+    <div class="container">
 
-        <div class="tarjeta">
-            <h2>Modo sin distracciones</h2>
-            <button onclick="activarModo()">Activar</button>
-        </div>
+        <label for="minutos">Minutos:</label>
+        <input type="number" id="minutos" value="25" min="1" max="180" style="
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 12px;
+            border: 1px solid #A7D8FF;
+            font-size: 1rem;
+        ">
 
-    </main>
+        <h2 style="text-align:center; margin-top:20px;">Tiempo restante</h2>
+        <div id="display" style="
+            font-size: 3rem;
+            text-align:center;
+            color:#2D7FF9;
+            margin: 10px 0 20px;
+        ">25:00</div>
 
-    <script>
-        const tips = [
-            "Coloca tu celular en silencio durante 25 minutos.",
-            "Evita estudiar cerca de la cama.",
-            "Estudia en un ambiente con buena luz.",
-            "Toma descansos cortos entre sesiones.",
-            "Haz un pequeño estiramiento antes de empezar."
-        ];
+        <button onclick="iniciar()">Iniciar</button>
+        <button onclick="pausar()">Pausar</button>
+        <button onclick="reiniciar()">Reiniciar</button>
 
-        function nuevoTip() {
-            let random = Math.floor(Math.random() * tips.length);
-            document.getElementById("tip").innerText = tips[random];
-        }
+    </div>
 
-        function activarModo() {
-            alert("Modo sin distracciones activado.\nRespira hondo y concéntrate.");
-        }
-
-        // Mostrar un tip automáticamente al entrar
-        window.onload = () => nuevoTip();
-    </script>
-
+    <script src="enfoque.js"></script>
 </body>
 </html>
