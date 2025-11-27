@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>EduTime</title>
 
-    <!-- FUENTE ELEGANTE, LIMPIA Y MINIMALISTA -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- ESTILOS -->
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <!-- MANIFEST -->
-    <link rel="manifest" href="manifiesto.json">
+    <!-- MANIFEST PARA APP -->
+    <link rel="manifest" href="manifest.json">
 
-    <!-- ÍCONO -->
-    <link rel="icon" type="image/png" href="iconos/icon-192.png">
+    <!-- ICONO -->
+    <link rel="icon" type="image/png" href="icons/icon-192.png" />
 </head>
 
 <body>
 
     <header class="header">
-        <h1 class="brand">EduTime</h1>
-        <p class="subtitle">Organiza. Enfócate. Aprende mejor.</p>
+        <h1>EduTime</h1>
+        <p class="subtitle">Organiza. Enfócate. Avanza.</p>
     </header>
 
-    <section class="menu">
-        <a class="card" href="enfoque.html">
-            <h3>🎯 Modo Enfoque</h3>
-            <p>Temporizador personalizable y modo concentración.</p>
-        </a>
-
-        <a class="card" href="agenda.html">
-            <h3>📚 Agenda Escolar</h3>
-            <p>Registra tareas, actividades y exámenes.</p>
-        </a>
-
-        <a class="card" href="notas.html">
-            <h3>📝 Notas Rápidas</h3>
-            <p>Guarda ideas o apuntes mientras estudias.</p>
-        </a>
-
-        <a class="card" href="estadisticas.html">
-            <h3>📊 Estadísticas</h3>
-            <p>Revisa tu progreso y enfoque diario.</p>
-        </a>
+    <section class="daily-tip">
+        <h2>💡 Consejo del día</h2>
+        <p id="tip-text">Cargando...</p>
     </section>
 
+    <section class="main-buttons">
+        <a href="enfoque.html" class="btn big">🎯 Modo Enfoque</a>
+        <a href="agenda.html" class="btn">📚 Agenda</a>
+        <a href="notas.html" class="btn">📝 Notas</a>
+        <a href="estadisticas.html" class="btn">📊 Estadísticas</a>
+    </section>
+
+    <footer>
+        <p>EduTime © 2025</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
