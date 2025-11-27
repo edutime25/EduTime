@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enfoque Inteligente - EduTime</title>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Enfoque Inteligente</h1>
+        <p>Consejos para estudiar con mayor concentración.</p>
+    </header>
+
+    <main class="contenedor">
+
+        <div class="tarjeta">
+            <h2>Consejo del día</h2>
+            <p id="tip"></p>
+            <button onclick="nuevoTip()">Nuevo consejo</button>
+        </div>
+
+        <div class="tarjeta">
+            <h2>Modo sin distracciones</h2>
+            <button onclick="activarModo()">Activar</button>
+        </div>
+
+    </main>
+
+    <script>
+        const tips = [
+            "Coloca tu celular en silencio durante 25 minutos.",
+            "Evita estudiar cerca de la cama.",
+            "Estudia en un ambiente con buena luz.",
+            "Toma descansos cortos entre sesiones.",
+            "Haz un pequeño estiramiento antes de empezar."
+        ];
+
+        function nuevoTip() {
+            let random = Math.floor(Math.random() * tips.length);
+            document.getElementById("tip").innerText = tips[random];
+        }
+
+        function activarModo() {
+            alert("Modo sin distracciones activado.\nRespira hondo y concéntrate.");
+        }
+
+        // Mostrar un tip automáticamente al entrar
+        window.onload = () => nuevoTip();
+    </script>
+
+</body>
+</html>
