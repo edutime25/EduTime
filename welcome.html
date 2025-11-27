@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido - EduTime</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="welcome-body">
+
+    <div class="welcome-container">
+        <h1 class="welcome-title">¡Bienvenido a EduTime!</h1>
+        <p class="welcome-sub">Personaliza tu espacio de estudio</p>
+
+        <!-- INPUT DE NOMBRE -->
+        <div class="input-box">
+            <label for="username">Tu nombre</label>
+            <input type="text" id="username" placeholder="Escribe tu nombre">
+        </div>
+
+        <!-- AVATARES -->
+        <p class="choose-text">Elige tu avatar</p>
+
+        <div class="avatar-grid">
+            <img src="https://api.dicebear.com/7.x/fun-emoji/svg?seed=Alice" class="avatar" data-avatar="1">
+            <img src="https://api.dicebear.com/7.x/fun-emoji/svg?seed=Lucas" class="avatar" data-avatar="2">
+            <img src="https://api.dicebear.com/7.x/fun-emoji/svg?seed=Maria" class="avatar" data-avatar="3">
+            <img src="https://api.dicebear.com/7.x/fun-emoji/svg?seed=Ethan" class="avatar" data-avatar="4">
+            <img src="https://api.dicebear.com/7.x/fun-emoji/svg?seed=Sofia" class="avatar" data-avatar="5">
+        </div>
+
+        <button id="startBtn" class="welcome-btn">Comenzar</button>
+    </div>
+
+    <script src="welcome.js"></script>
+</body>
+</html>
