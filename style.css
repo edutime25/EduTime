@@ -1,24 +1,17 @@
 body {
     font-family: Arial, sans-serif;
-    background: #e6f1ff;
     margin: 0;
-    padding: 0;
-    color: #003366;
+    background: #e3f2fd;
 }
 
 header {
-    background: #4da3ff;
-    padding: 20px;
     text-align: center;
+    background: #2196f3;
     color: white;
+    padding: 20px;
 }
 
-.sub {
-    margin-top: -10px;
-    font-size: 14px;
-}
-
-section {
+#features {
     padding: 20px;
 }
 
@@ -26,30 +19,34 @@ section {
     background: white;
     padding: 15px;
     margin: 10px 0;
-    border-left: 5px solid #4da3ff;
+    border-radius: 10px;
+}
+
+.enlace-enfoque {
+    display: inline-block;
+    background: #1e88e5;
+    color: white;
+    padding: 10px 15px;
     border-radius: 8px;
+    text-decoration: none;
+    margin: 10px 0;
 }
 
 #timer {
     text-align: center;
+    padding: 20px;
 }
 
 #time-display {
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 48px;
     margin: 20px 0;
 }
 
 button {
-    background: #4da3ff;
+    padding: 10px;
+    margin: 5px;
+    background: #2196f3;
     color: white;
     border: none;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #1c7dde;
+    border-radius: 6px;
 }
