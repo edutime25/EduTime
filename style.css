@@ -185,3 +185,111 @@ footer {
 .welcome-btn:hover {
     background: #3a6fdd;
 }
+/* ================================
+   PANTALLA DE ENFOQUE
+================================ */
+
+.focus-body {
+    background: #eaf2ff;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.focus-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #4a8cff;
+    padding: 15px;
+    color: white;
+}
+
+.focus-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.focus-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.focus-container {
+    padding: 20px;
+}
+
+.section-title {
+    font-family: 'Poppins';
+    font-size: 1.4rem;
+    margin-top: 25px;
+}
+
+.timer-box {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.time-select {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.time-select input {
+    width: 70px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #bcd1ff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.timer-display {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#timerText {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+
+.btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.primary-btn {
+    padding: 10px 25px;
+    background: #4a8cff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    padding: 10px 25px;
+    background: #d4e2ff;
+    color: #1c2a3a;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.pomodoro-btn {
+    padding: 10px;
+    background: #87bfff;
+    color: #1c2a3a;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
