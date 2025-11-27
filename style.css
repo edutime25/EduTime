@@ -293,3 +293,26 @@ footer {
     border-radius: 12px;
     cursor: pointer;
 }
+/* ================================
+   RACHA DE ESTUDIO
+================================ */
+
+.streak-box {
+    margin: 25px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #b7c9ff;
+}
+
+.streak-title {
+    font-family: 'Poppins';
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.streak-number {
+    font-size: 1.1rem;
+    color: #1c2a3a;
+    font-weight: 600;
+}
