@@ -1,52 +1,110 @@
+:root {
+    --azul: #3B82F6;
+    --celeste: #93C5FD;
+    --gris: #F5F5F5;
+    --negro: #1F2937;
+    --blanco: #FFFFFF;
+
+    --fondo: var(--blanco);
+    --texto: var(--negro);
+}
+
+body.dark {
+    --fondo: #0f172a;
+    --texto: #e2e8f0;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background: #e3f2fd;
+    font-family: "Inter", sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    transition: 0.3s;
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--texto);
+}
+
+#motivacion {
     text-align: center;
-    background: #2196f3;
-    color: white;
-    padding: 20px;
-}
-
-#features {
-    padding: 20px;
-}
-
-.feature-card {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
-}
-
-.enlace-enfoque {
-    display: inline-block;
-    background: #1e88e5;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin: 10px 0;
+    font-size: 18px;
+    margin: 10px 0 20px;
+    color: var(--azul);
 }
 
 #timer {
     text-align: center;
-    padding: 20px;
+    margin-top: 10px;
+}
+
+.progress-container {
+    position: relative;
+    width: 180px;
+    margin: 0 auto;
 }
 
 #time-display {
-    font-size: 48px;
-    margin: 20px 0;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
 }
 
-button {
-    padding: 10px;
-    margin: 5px;
-    background: #2196f3;
-    color: white;
-    border: none;
-    border-radius: 6px;
+.progress-ring-circle {
+    fill: transparent;
+    stroke: var(--azul);
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
 }
+
+#controls {
+    margin: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+#min-input {
+    width: 60px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid var(--celeste);
+    text-align: center;
+}
+
+.buttons button {
+    width: 120px;
+    padding: 12px;
+    margin: 6px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.primary { background: var(--azul); }
+.secondary { background: #64748b; }
+.danger { background: #dc2626; }
+
+button:active { transform: scale(0.95); }
