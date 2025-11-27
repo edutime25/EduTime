@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notas rápidas - EduTime</title>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Apuntes rápidos</h1>
+        <p>Escribe tus ideas mientras estudias.</p>
+    </header>
+
+    <main class="contenedor">
+        <textarea id="nota" placeholder="Escribe aquí..." style="width:90%; height:200px;"></textarea>
+        <button onclick="guardarNota()">Guardar</button>
+    </main>
+
+    <script>
+        function guardarNota() {
+            const texto = document.getElementById("nota").value;
+            localStorage.setItem("notaGuardada", texto);
+            alert("Nota guardada");
+        }
+
+        window.onload = () => {
+            const guardada = localStorage.getItem("notaGuardada");
+            if (guardada) {
+                document.getElementById("nota").value = guardada;
+            }
+        };
+    </script>
+</body>
+</html>
