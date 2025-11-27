@@ -80,3 +80,109 @@ footer {
     color: #7a7a7a;
     font-size: 0.9rem;
 }
+
+/* ================================
+   PANTALLA DE BIENVENIDA
+================================ */
+
+.welcome-body {
+    background: linear-gradient(135deg, #4a8cff, #87bfff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.welcome-container {
+    background: white;
+    width: 90%;
+    max-width: 380px;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.welcome-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: #1c2a3a;
+}
+
+.welcome-sub {
+    font-size: .95rem;
+    opacity: .7;
+    margin-bottom: 25px;
+}
+
+.input-box {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 15px;
+    border: 2px solid #c8d8ff;
+    outline: none;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.choose-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.avatar-grid {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: transform .2s, border .2s;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+}
+
+.avatar-selected {
+    border: 3px solid #4a8cff;
+    transform: scale(1.1);
+}
+
+.welcome-btn {
+    background: #4a8cff;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.welcome-btn:hover {
+    background: #3a6fdd;
+}
