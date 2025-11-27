@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduTime</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="manifest.json" />
-    <link rel="icon" type="image/png" href="icons/icon-192.png">
+    <!-- FUENTE ELEGANTE, LIMPIA Y MINIMALISTA -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="manifiesto.json">
+
+    <!-- ÍCONO -->
+    <link rel="icon" type="image/png" href="iconos/icon-192.png">
 </head>
+
 <body>
 
-    <header>
-        <h1>EduTime</h1>
-        <button id="theme-toggle">🌙</button>
+    <header class="header">
+        <h1 class="brand">EduTime</h1>
+        <p class="subtitle">Organiza. Enfócate. Aprende mejor.</p>
     </header>
 
-    <section id="motivacion">
-        <p id="frase"></p>
+    <section class="menu">
+        <a class="card" href="enfoque.html">
+            <h3>🎯 Modo Enfoque</h3>
+            <p>Temporizador personalizable y modo concentración.</p>
+        </a>
+
+        <a class="card" href="agenda.html">
+            <h3>📚 Agenda Escolar</h3>
+            <p>Registra tareas, actividades y exámenes.</p>
+        </a>
+
+        <a class="card" href="notas.html">
+            <h3>📝 Notas Rápidas</h3>
+            <p>Guarda ideas o apuntes mientras estudias.</p>
+        </a>
+
+        <a class="card" href="estadisticas.html">
+            <h3>📊 Estadísticas</h3>
+            <p>Revisa tu progreso y enfoque diario.</p>
+        </a>
     </section>
 
-    <section id="timer">
-        <div class="progress-container">
-            <svg class="progress-ring" width="180" height="180">
-                <circle class="progress-ring-circle" stroke-width="8" r="80" cx="90" cy="90"/>
-            </svg>
-            <div id="time-display">25:00</div>
-        </div>
-
-        <div id="controls">
-            <input type="number" id="min-input" min="1" max="180" value="25">
-            <span>min</span>
-        </div>
-
-        <div class="buttons">
-            <button onclick="startTimer()" class="primary">Iniciar</button>
-            <button onclick="pauseTimer()" class="secondary">Pausar</button>
-            <button onclick="resetTimer()" class="danger">Reiniciar</button>
-        </div>
-    </section>
-
-    <script src="main.js"></script>
 </body>
 </html>
