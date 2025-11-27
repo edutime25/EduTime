@@ -9,43 +9,35 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" type="image/png" href="icons/icon-192.png">
 </head>
-
 <body>
 
     <header>
         <h1>EduTime</h1>
-        <p class="sub">Tu espacio para estudiar mejor</p>
+        <button id="theme-toggle">🌙</button>
     </header>
 
-    <section id="features">
-        <h2>Funciones principales</h2>
-
-        <!-- BOTÓN HACIA ENFOQUE -->
-        <a href="enfoque.html" class="enlace-enfoque">Ir al Modo Enfoque</a>
-
-        <div class="feature-card">
-            <h3>🎯 Enfoque Inteligente</h3>
-            <p>Temporizadores, modo concentración, recordatorios y estadísticas.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>📚 Organización escolar</h3>
-            <p>Agenda, tareas, exámenes y actividades.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>📝 Apuntes rápidos</h3>
-            <p>Guarda tus ideas o recordatorios mientras estudias.</p>
-        </div>
+    <section id="motivacion">
+        <p id="frase"></p>
     </section>
 
     <section id="timer">
-        <h2>Temporizador de enfoque</h2>
-        <div id="time-display">25:00</div>
+        <div class="progress-container">
+            <svg class="progress-ring" width="180" height="180">
+                <circle class="progress-ring-circle" stroke-width="8" r="80" cx="90" cy="90"/>
+            </svg>
+            <div id="time-display">25:00</div>
+        </div>
 
-        <button onclick="startTimer()">Iniciar</button>
-        <button onclick="pauseTimer()">Pausar</button>
-        <button onclick="resetTimer()">Reiniciar</button>
+        <div id="controls">
+            <input type="number" id="min-input" min="1" max="180" value="25">
+            <span>min</span>
+        </div>
+
+        <div class="buttons">
+            <button onclick="startTimer()" class="primary">Iniciar</button>
+            <button onclick="pauseTimer()" class="secondary">Pausar</button>
+            <button onclick="resetTimer()" class="danger">Reiniciar</button>
+        </div>
     </section>
 
     <script src="main.js"></script>
