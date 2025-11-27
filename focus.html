@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Enfoque - EduTime</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="focus-body">
+
+    <header class="focus-header">
+        <img id="userAvatar" class="focus-avatar">
+        <span id="userName" class="focus-name"></span>
+    </header>
+
+    <main class="focus-container">
+
+        <h2 class="section-title">Modo Enfoque</h2>
+
+        <div class="timer-box">
+
+            <!-- Selector de minutos -->
+            <div class="time-select">
+                <label>Minutos</label>
+                <input type="number" id="minutes" min="0" max="999" value="25">
+            </div>
+
+            <!-- Selector de segundos -->
+            <div class="time-select">
+                <label>Segundos</label>
+                <input type="number" id="seconds" min="0" max="59" value="00">
+            </div>
+        </div>
+
+        <div class="timer-display">
+            <span id="timerText">25:00</span>
+        </div>
+
+        <div class="btn-row">
+            <button id="startBtn" class="primary-btn">Iniciar</button>
+            <button id="resetBtn" class="secondary-btn">Reiniciar</button>
+        </div>
+
+        <h2 class="section-title">Modo Pomodoro</h2>
+
+        <div class="btn-row">
+            <button class="pomodoro-btn" onclick="startPomodoro(25, 5)">25/5 Clásico</button>
+            <button class="pomodoro-btn" onclick="startPomodoro(40, 10)">40/10 Largo</button>
+            <button class="pomodoro-btn" onclick="startPomodoro(15, 5)">15/5 Rápido</button>
+        </div>
+
+    </main>
+
+    <script src="focus.js"></script>
+</body>
+</html>
