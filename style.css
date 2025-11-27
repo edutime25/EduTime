@@ -1,108 +1,82 @@
-/* Fuente moderna */
-* {
+/* Fuente general */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: #f3faff;
+    color: #0a2b4c;
 }
 
-/* Colores base */
-:root {
-    --azul: #2D7FF9;
-    --celeste: #A7D8FF;
-    --fondo: #F4F9FF;
-    --texto: #1A1A1A;
-    --card: #ffffff;
-}
-
-/* Fondo general */
-body {
-    background: var(--fondo);
-    color: var(--texto);
-    padding: 20px;
-}
-
-/* HEADER */
+/* Encabezado */
 .header {
     text-align: center;
-    margin-bottom: 40px;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #4ca8ff, #1b70c9);
+    color: white;
 }
 
-.brand {
+.header h1 {
     font-size: 2.4rem;
-    font-weight: 700;
-    color: var(--azul);
+    margin-bottom: 5px;
 }
 
 .subtitle {
+    opacity: 0.9;
     font-size: 1rem;
-    color: #333;
-    opacity: 0.8;
 }
 
-/* CARDS DEL MENÚ */
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.card {
-    background: var(--card);
-    padding: 18px;
-    border-radius: 16px;
-    text-decoration: none;
-    color: var(--texto);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    transition: transform .15s ease, box-shadow .15s ease;
-    border-left: 6px solid var(--azul);
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-    font-size: 1.2rem;
-    color: var(--azul);
-    margin-bottom: 6px;
-}
-
-.card p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* BOTONES GENERALES */
-button {
-    background: var(--azul);
-    color: white;
-    border: none;
-    padding: 12px 18px;
-    font-size: 1rem;
-    border-radius: 12px;
-    cursor: pointer;
-    margin-top: 14px;
-    width: 100%;
-    transition: background .15s ease;
-}
-
-button:hover {
-    background: #1B5FCC;
-}
-
-/* CONTENEDORES GENERALES PARA PÁGINAS INTERNAS */
-.container {
+/* Consejo del día */
+.daily-tip {
     background: white;
     padding: 20px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 500px;
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    margin-top: 20px;
+    box-shadow: 0px 4px 14px rgba(0, 90, 160, 0.1);
 }
 
-/* TITULOS EN PÁGINAS INTERNAS */
-h2 {
-    color: var(--azul);
-    margin-bottom: 10px;
-                                }
+.daily-tip h2 {
+    margin-top: 0;
+    color: #1b70c9;
+}
+
+/* Botones principales */
+.main-buttons {
+    margin: 20px auto;
+    width: 85%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.btn {
+    text-align: center;
+    background: #1b70c9;
+    padding: 14px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #1458a0;
+}
+
+.big {
+    font-size: 1.2rem;
+    padding: 18px;
+    background: #4ca8ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #7a7a7a;
+    font-size: 0.9rem;
+}
