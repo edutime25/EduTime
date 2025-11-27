@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda - EduTime</title>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Agenda Escolar</h1>
+        <p>Registra tus tareas, exámenes y actividades.</p>
+    </header>
+
+    <main class="contenedor">
+
+        <div class="tarjeta">
+            <h2>Nueva actividad</h2>
+            <input id="titulo" type="text" placeholder="Título">
+            <input id="fecha" type="date">
+            <textarea id="descripcion" placeholder="Descripción"></textarea>
+            <button onclick="guardarActividad()">Guardar</button>
+        </div>
+
+        <div class="tarjeta">
+            <h2>Mis actividades</h2>
+            <ul id="listaActividades"></ul>
+        </div>
+
+    </main>
+
+    <script>
+        function guardarActividad() {
+            const titulo = document.getElementById("titulo").value;
+            const fecha = document.getElementById("fecha").value;
+            const descripcion = document.getElementById("descripcion").value;
+
+            if (!titulo || !fecha) {
+                alert("Completa al menos el título y la fecha.");
+                return;
+            }
+
+            const actividad = {
+                titulo,
+                fecha,
+                descripcion
+            };
+
+            let actividades = JSON.parse(localStorage.getItem("actividades")) || [];
+            actividades.push(actividad);
+            localStorage.setItem("actividades", JSON.stringify(actividades));
+
+            mostrarActividades();
+        }
+
+        function mostrarActividades() {
+            let actividades = JSON.parse(localStorage.getItem("actividades")) || [];
+            const lista = document.getElementById("listaActividades");
+
+            lista.innerHTML = "";
+
+            actividades.forEach((a, i) => {
+                lista.innerHTML += `
+                    <li class="actividad">
+                        <strong>${a.titulo}</strong> - ${a.fecha}<br>
+                        <span>${a.descripcion}</span>
+                        <button onclick="eliminarActividad(${i})">Eliminar</button>
+                    </li>
+                `;
+            });
+        }
+
+        function eliminarActividad(index) {
+            let actividades = JSON.parse(localStorage.getItem("actividades")) || [];
+            actividades.splice(index, 1);
+            localStorage.setItem("actividades", JSON.stringify(actividades));
+            mostrarActividades();
+        }
+
+        mostrarActividades();
+    </script>
+
+</body>
+</html>
